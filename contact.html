@@ -19,7 +19,7 @@
     />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="favicon.jpg" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Tailwind CSS CDN -->
@@ -59,13 +59,15 @@
 
     <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black p-[5%] overflow-y-scroll">
     <!-- aside 20% width -->
-    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 border-r-0 w-[20%] p-6">
+    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 md:border-r-0 w-full md:w-[20%] p-6 flex flex-col items-center md:flex-rows md:items-start">
         <div class="flex-block md:items-start mb-6">
-            <img src="img/prof.JPG" alt="Profile Picture" class="rounded-xl w-full h-auto mb-4 mx-auto md:mx-0" />
+            <img src="img/prof.JPG" alt="Profile Picture" 
+                class="mx-auto mb-4 w-24 h-24 rounded-full md:w-full md:h-auto md:rounded-xl" />
+
             <p class="text-center md:text-left font-semibold text-xl">Rabbi Hasan</p>
             <p class="text-center md:text-left text-sm opacity-50">Problem Solver | Developer </p>
         </div>
-        <div class="text-gray-400 md:text-left">
+        <div class="mt-4 text-gray-400 space-y-2 text-center md:text-left">
             <div>
                 <i class="fa-solid fa-envelope opacity-70"></i>
                 <a href="mailto:imrabbihasan@gmailcom" target="blank">imrabbihasan@gmail.com</a>
@@ -90,7 +92,7 @@
     </aside>
 
      <!-- main 70% width -->
-     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-[70%]  overflow-y-auto custom-scrollbar">
+     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
         <nav>
             <ul class="flex gap-6 list-none p-0 m-0 justify-evenly">
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
@@ -106,12 +108,12 @@
                     <a href="#" class="px-2">Experience</a>
                 </li>
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
-                    <a href="#" class="px-2">Extra-Curriculam</a>
+                    <a href="#" class="px-2">Extra-Curriculam</a>  <!-- hover:cursor-not-allowed pointer-events-none  (click kora jabe na eta dile)-->
                 </li>
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
                     <a href="Resume.html" class="px-2">Resume</a>
                 </li>
-                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current transition-all duration-300 before:ease-in-out before:w-full text-purple-600 -translate-y-1 scale-110">
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out before:w-full text-purple-600 -translate-y-1 scale-110">
                     <a href="contact.html" class="px-2">Contact</a>
                 </li>
             </ul>
