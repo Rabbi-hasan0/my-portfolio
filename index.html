@@ -57,9 +57,9 @@
 
 <body class="h-screen bg-gradient-to-br from-black to-purple-900 font-poppins">
 
-    <div class="w-full h-screen flex flex-cols md:flex-rows justify-center gap-2 bg-black p-[5%] overflow-y-scroll">
+    <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black p-[5%] overflow-y-scroll">
     <!-- aside 20% width -->
-    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 md:border-r-0 w-full md:w-[20%] p-6 flex flex-col items-center md:flex-rows md:items-start">
+    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 md:border-r-0 w-full h-[20%] md:h-auto md:w-[20%] p-6 flex flex-col items-center md:items-start overflow-y-auto custom-scrollbar">
         <div class="flex-block md:items-start mb-6">
             <img src="img/prof.JPG" alt="Profile Picture" 
                 class="mx-auto mb-4 w-24 h-24 rounded-full md:w-full md:h-auto md:rounded-xl" />
@@ -92,7 +92,7 @@
     </aside>
 
      <!-- main 70% width -->
-     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
+     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] md:h-auto md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
         <nav>
             <ul class="flex gap-6 list-none p-0 m-0 justify-evenly">
                 <li class="relative transition-all duration-300  before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out before:w-full text-purple-600 -translate-y-1 scale-110">
