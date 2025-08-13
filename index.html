@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Rabbi's portfolio</title>
-  <meta content="" name="description" />
-  <meta content="" name="keywords" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rabbi's portfolio</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@400;600&family=Raleway:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@400;600&family=Raleway:wght@400;500&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;       /* chikon scrollbar */
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+        background: black; /* track color */
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgb(56, 17, 56); /* thumb color */
+        border-radius: 10px;
+        border: 1px solid #000; /* optional */
+        }
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Move half width because we duplicated items */
+        }
+
+        .animate-marquee {
+            display: flex;
+            animation: marquee 15s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused; /* pause on hover */
+        }
+    </style>
 </head>
 
-<body class="h-screen bg-gradient-to-br from-black to-purple-900 font-poppins overflow-y-auto">
+<body class="h-screen bg-gradient-to-br from-black to-purple-900 font-poppins">
 
-    <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black p-[5%]">
+    <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black p-[5%] overflow-y-scroll">
     <!-- aside 20% width -->
     <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 border-r-0 w-[20%] p-6">
         <div class="flex-block md:items-start mb-6">
-            <img src="prof.JPG" alt="Profile Picture" class="rounded-xl w-full h-auto mb-4 mx-auto md:mx-0" />
+            <img src="img/prof.JPG" alt="Profile Picture" class="rounded-xl w-full h-auto mb-4 mx-auto md:mx-0" />
             <p class="text-center md:text-left font-semibold text-xl">Rabbi Hasan</p>
             <p class="text-center md:text-left text-sm opacity-50">Problem Solver | Developer </p>
         </div>
@@ -59,48 +90,166 @@
     </aside>
 
      <!-- main 70% width -->
-     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-[70%]">
+     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-[70%]  overflow-y-auto custom-scrollbar">
         <nav>
-            <ul class="flex flex-wrap justify-around md:justify-start gap-6 list-none p-0 m-0">
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Home</a>
+            <ul class="flex gap-6 list-none p-0 m-0 justify-evenly">
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out before:w-full text-purple-600 translate-y-1 scale-110 current:before:w-full">
+                    <a href="index.html" class="px-2">About</a>
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">About</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="skills.html" class="px-2">Skills</a>
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Skills</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="project.html" class="px-2">Projects</a>
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Projects</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="#" class="px-2">Experience</a>
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Resume</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="#" class="px-2">Extra-Curriculam</a>  <!-- hover:cursor-not-allowed pointer-events-none  (click kora jabe na eta dile)-->
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Extra-Curricular</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="Resume.html" class="px-2">Resume</a>
                 </li>
-                <li class="relative hover:-translate-y-1 hover:scale-110 transition delay-150 duration-300
-                before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0
-                before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600">
-                <a href="#" class="px-2">Contact</a>
+                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
+                    <a href="contact.html" class="px-2">Contact</a>
                 </li>
             </ul>
         </nav>
+
+        <!-- About Page -->
         <main class="m-8 flex place-content-center">
-            <marquee class="font-semibold text-xl text-purple-400 font-stretch-extra-expanded italic opacity-70"> Welcome to my portfolio</marquee>
+            <div class="mt-8">
+                <marquee class="font-semibold text-xl text-purple-400 font-stretch-extra-expanded italic opacity-70"> Welcome to my portfolio</marquee>
+                <p class="text-xl w-24 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">About me</p>
+                <article class="text-gray-300 mt-4 text-justify hover:cursor-pointer">
+                    I'm a problem solver, overall solved 1400+ problem with Data Structure and Algorithm. Participate in total 
+                    up to 200+ online and offline contest. Achieve, 15th position of Intra programming contest. Champion of ‘YouKnowWho’ 
+                    academic camp contest. <span class="font-semibold"> Participate 1x ICPC and 1x NCPC and 3x IUPC and 2x Intra contest.</span> 
+                    And present I am graduating at Bangladesh University of Business And Technology.
+                </article>
+                <p class="mt-8 text-xl w-60 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Compettive programming</p>
+                <div class="grid grid-cols-3 gap-4 mt-8 h-auto">
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl shadow-gray-600 border-r border-purple-500">
+                        <img src="img/cf_icon.png" alt="Competitive Programming" class="w-8 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="https://codeforces.com/profile/Rabbi_hasan162" target="_blank">Codeforces</a>
+                        <div class="absolute top-12 left-2">
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"> </i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Max rating: <span class="text-cyan-600 font-medium text-lg opacity-80">(specialist, <span class="text-sm"> 1416</span>) </span></span> <br>
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Total solved: 1150+</span> <br>
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Total contest: 150+</span>
+                        </div>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl shadow-gray-600 border-r border-gray-100">
+                        <img src="img/ccf_icon.png" alt="Competitive Programming" class="w-auto h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="https://www.codechef.com/users/rabbi_hasan162" target="_blank">CodeChef</a>
+                        <div class="absolute top-12 left-2">
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"> </i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Max rating: <span class="text-cyan-600 font-medium text-lg opacity-80">(3<i class="fa-solid fa-star"></i>, <span class="text-sm"> 1660</span>) </span></span> <br>
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Total solved: 50+</span> <br>
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Total contest: 10+</span>
+                        </div>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl shadow-gray-600 border-r border-purple-500">
+                        <img src="img/leet_icon.png" alt="Competitive Programming" class="w-8 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="https://leetcode.com/u/Rabbi_Hasan-162/" target="_blank">LeetCode</a>
+                        <div class="absolute top-12 left-2">
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Total solved: 50+</span> <br>
+                            <i class="fa-solid fa-check-square text-white absolute text-xl"></i>
+                            <span class="ml-8 text-white opacity-80 font-semibold">Rank: 2,653,586</span>
+                        </div>
+                    </div>
+
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl shadow-gray-600 border-r border-gray-100 flex items-center justify-center">
+                        <img src="img/icpc_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">ICPC</a>
+                        <p class="text-white text-lg font-medium text-center p-8 mt-8 opacity-80">1x time ICPC Dhaka Regional (top-80%)</p>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 border-r border-purple-600 shadow-xl shadow-gray-600 flex items-center justify-center">
+                        <img src="img/topoh_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">IUPC</a>
+                        <p class="text-white text-lg font-medium opacity-80">3x time IUPC (top-40%)</p>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 border-r border-gray-100 shadow-xl shadow-gray-600 flex items-center justify-center">
+                        <img src="img/baps_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">Bubt-Intra</a>
+                        <p class="text-white text-lg font-medium opacity-80">2x time Intra (top-10%)</p>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 border-r border-purple-600 shadow-xl shadow-gray-600 flex items-center justify-center">
+                        <img src="img/baps_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">YouKnowWho</a>
+                        <p class="text-white text-lg font-medium opacity-80">Camp-contest (top-1%)</p>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 border-r border-gray-100 shadow-xl shadow-gray-600 flex items-center justify-center">
+                        <img src="img/baps_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">NCPC</a>
+                        <p class="text-white text-lg font-medium opacity-80">1x time preli (2023)</p>
+                    </div>
+                    <div class="relative h-36 rounded-md bg-gray-900 border-r border-purple-600 shadow-xl shadow-gray-600 flex items-center justify-center">
+                        <img src="img/baps_icon.png" alt="Competitive Programming" class="w-12 h-8 absolute top-2 left-2"/>
+                        <!-- Right text -->
+                        <a class="absolute top-2 right-2 text-white font-semibold text-warp text-xl" style="color: rgb(74, 130, 195);" href="#" target="_blank">Hacker-Cup</a>
+                        <p class="text-white text-lg font-medium opacity-80 text-center p-8 mt-8">Qualified for 2nd Round (2024)</p>
+                    </div>
+                </div>
+                
+                <p class="mt-8 text-xl w-36 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">All Certification</p>
+                <!-- Marquee for certificates -->
+                <div class="overflow-hidden relative w-full mt-4">
+                    <div class="flex animate-marquee gap-4">
+                        <img src="certificate/m-2024-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+                        <img src="certificate/2022-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+                        <img src="certificate/2022-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+
+                        <img src="certificate/m-2024-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+                        <img src="certificate/2022-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+                        <img src="certificate/2022-1.png" 
+                            class="h-36 w-2/3 shadow-2xl cursor-pointer object-cover" 
+                            onclick="openModal(this.src)" />
+                    </div>
+                </div>
+
+                <!-- Modal customized by js-->
+                <div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+                    <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" class="max-h-full max-w-full rounded-lg shadow-2xl" />
+                </div>
+
+                <script>
+                    function openModal(src) {
+                        document.getElementById('modalImage').src = src;
+                        document.getElementById('certificateModal').classList.remove('hidden');
+                    }
+
+                    function closeModal() {
+                        document.getElementById('certificateModal').classList.add('hidden');
+                    }
+                </script>
+               
+            </div>
         </main>
     </div>
   </div>
