@@ -92,7 +92,7 @@
     </aside>
 
      <!-- main 70% width -->
-     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] md:h-auto md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
+     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] md:h-auto md:w-[100%] overflow-y-auto custom-scrollbar">
         <nav>
             <ul class="flex gap-6 list-none p-0 m-0 justify-evenly">
                 <li class="relative transition-all duration-300  before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out before:w-full text-purple-600 -translate-y-1 scale-110">
@@ -124,90 +124,89 @@
             <div class="mt-8">
                 <marquee class="font-semibold text-xl text-purple-400 font-stretch-extra-expanded italic opacity-70"> Welcome to my portfolio</marquee>
                 <p class="text-xl w-24 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">About me</p>
-                <article class="text-gray-300 mt-4 text-justify hover:cursor-pointer">
+                <article class="text-gray-300 mt-4 text-justify hover:cursor-pointer md:w-full">
                     I'm a problem solver, overall solved 1400+ problem with Data Structure and Algorithm. Participate in total 
                     up to 200+ online and offline contest. Achieve, 15th position of Intra programming contest. Champion of ‘YouKnowWho’ 
                     academic camp contest. <span class="font-semibold"> Participate 1x ICPC and 1x NCPC and 3x IUPC and 2x Intra contest.</span> 
                     And present I am graduating at Bangladesh University of Business And Technology.
                 </article>
                 <p class="mt-8 text-xl w-60 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Compettive programming</p>
-                <div class="grid grid-cols-3 gap-4 mt-8 h-auto">
-                <!-- Codeforces -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/cf_icon.png" alt="Codeforces" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="https://codeforces.com/profile/Rabbi_hasan162" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Codeforces</a>
-                    <div class="text-gray-300 text-sm text-center space-y-1">
-                        <p>Max rating: <span class="text-cyan-400">Specialist 1416</span></p>
-                        <p>Total solved: 1150+</p>
-                        <p>Total contests: 150+</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+                    <!-- Codeforces -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/cf_icon.png" alt="Codeforces" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="https://codeforces.com/profile/Rabbi_hasan162" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Codeforces</a>
+                        <div class="text-gray-300 text-sm text-center space-y-1">
+                            <p>Max rating: <span class="text-cyan-400">Specialist 1416</span></p>
+                            <p>Total solved: 1150+</p>
+                            <p>Total contests: 150+</p>
+                        </div>
+                    </div>
+
+                    <!-- CodeChef -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/codechef_icon.png" alt="CodeChef" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="https://www.codechef.com/users/rabbi_hasan162" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">CodeChef</a>
+                        <div class="text-gray-300 text-sm text-center space-y-1">
+                            <p>Max rating: <span class="text-cyan-400">3★ 1660</span></p>
+                            <p>Total solved: 50+</p>
+                            <p>Total contests: 10+</p>
+                        </div>
+                    </div>
+
+                    <!-- LeetCode -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/leet_icon.png" alt="LeetCode" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="https://leetcode.com/u/Rabbi_Hasan-162/" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">LeetCode</a>
+                        <div class="text-gray-300 text-sm text-center space-y-1">
+                            <p>Total solved: 50+</p>
+                            <p>Rank: 2,653,586</p>
+                        </div>
+                    </div>
+
+                    <!-- ICPC -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/icpc_icon.png" alt="ICPC" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">ICPC</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">1x time ICPC Dhaka Regional (top-80%)</p>
+                    </div>
+
+                    <!-- IUPC -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/topoh_icon.png" alt="IUPC" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">IUPC</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">3x time IUPC (top-40%)</p>
+                    </div>
+
+                    <!-- Bubt-Intra -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/baps_icon.png" alt="Bubt-Intra" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Bubt-Intra</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">2x time Intra (top-10%)</p>
+                    </div>
+
+                    <!-- YouKnowWho -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/baps_icon.png" alt="YouKnowWho" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">YouKnowWho</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">Camp-contest (top-1%)</p>
+                    </div>
+
+                    <!-- NCPC -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/baps_icon.png" alt="NCPC" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">NCPC</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">1x time preli (2023)</p>
+                    </div>
+
+                    <!-- Hacker-Cup -->
+                    <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
+                        <img src="img/baps_icon.png" alt="Hacker-Cup" class="w-12 h-8 absolute top-2 left-2"/>
+                        <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Hacker-Cup</a>
+                        <p class="text-gray-300 text-sm text-center mt-4">Qualified for 2nd Round (2024)</p>
                     </div>
                 </div>
 
-                <!-- CodeChef -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/codechef_icon.png" alt="CodeChef" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="https://www.codechef.com/users/rabbi_hasan162" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">CodeChef</a>
-                    <div class="text-gray-300 text-sm text-center space-y-1">
-                        <p>Max rating: <span class="text-cyan-400">3★ 1660</span></p>
-                        <p>Total solved: 50+</p>
-                        <p>Total contests: 10+</p>
-                    </div>
-                </div>
-
-                <!-- LeetCode -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/leet_icon.png" alt="LeetCode" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="https://leetcode.com/u/Rabbi_Hasan-162/" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">LeetCode</a>
-                    <div class="text-gray-300 text-sm text-center space-y-1">
-                        <p>Total solved: 50+</p>
-                        <p>Rank: 2,653,586</p>
-                    </div>
-                </div>
-
-                <!-- ICPC -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/icpc_icon.png" alt="ICPC" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">ICPC</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">1x time ICPC Dhaka Regional (top-80%)</p>
-                </div>
-
-                <!-- IUPC -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/topoh_icon.png" alt="IUPC" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">IUPC</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">3x time IUPC (top-40%)</p>
-                </div>
-
-                <!-- Bubt-Intra -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/baps_icon.png" alt="Bubt-Intra" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Bubt-Intra</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">2x time Intra (top-10%)</p>
-                </div>
-
-                <!-- YouKnowWho -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/baps_icon.png" alt="YouKnowWho" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">YouKnowWho</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">Camp-contest (top-1%)</p>
-                </div>
-
-                <!-- NCPC -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/baps_icon.png" alt="NCPC" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">NCPC</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">1x time preli (2023)</p>
-                </div>
-
-                <!-- Hacker-Cup -->
-                <div class="relative h-36 rounded-md bg-gray-900 shadow-xl flex flex-col justify-center items-center p-4">
-                    <img src="img/baps_icon.png" alt="Hacker-Cup" class="w-12 h-8 absolute top-2 left-2"/>
-                    <a href="#" target="_blank" class="absolute top-2 right-2 text-cyan-400 font-semibold text-lg">Hacker-Cup</a>
-                    <p class="text-gray-300 text-sm text-center mt-4">Qualified for 2nd Round (2024)</p>
-                </div>
-            </div>
-
-                
                 <p class="mt-8 text-xl w-36 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">All Certification</p>
                 <!-- Marquee for certificates -->
                 <div class="overflow-hidden relative w-full mt-4">
