@@ -27,17 +27,17 @@
 
     <style>
         .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;       /* chikon scrollbar */
+            width: 6px;       /* chikon scrollbar */
         }
 
         .custom-scrollbar::-webkit-scrollbar-track {
-        background: black; /* track color */
+            background: black; /* track color */
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: rgb(56, 17, 56); /* thumb color */
-        border-radius: 10px;
-        border: 1px solid #000; /* optional */
+            background-color: rgb(135, 135, 135); /* thumb color */
+            border-radius: 30px;
+            border: 1px solid rgb(52, 25, 52); /* optional */
         }
         @keyframes marquee {
             0%   { transform: translateX(0); }
@@ -59,15 +59,16 @@
 
     <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black p-[5%] overflow-y-scroll">
     <!-- aside 20% width -->
-    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-purple-500 md:border-r-0 w-full h-[20%] md:h-auto md:w-[20%] p-6 flex flex-col items-center md:flex-rows md:items-start overflow-y-auto custom-scrollbar">
-        <div class="flex-block md:items-start mb-6 border-b-2 border-purple-500 pb-4">
+    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-b-0 md:border-b border-purple-500 md:border-r-0 w-full h-[30%] md:h-auto md:w-[20%] p-6 flex flex-row md:flex-col md:items-start overflow-y-hidden custom-scrollbar">
+    <div class="md:block md:items-start md:mb-6 md:border-b-2 border-purple-500 md:pb-4">
             <img src="img/prof.JPG" alt="Profile Picture" 
-                class="mx-auto mb-4 w-24 h-24 rounded-full md:w-full md:h-auto md:rounded-xl" />
-
-            <p class="text-center md:text-left font-semibold text-xl">Rabbi Hasan</p>
-            <p class="text-center md:text-left text-sm opacity-50">Problem Solver | Developer </p>
+                class="mx-auto mb-4 w-24 h-24 rounded-xl md:w-full md:h-auto md:rounded-xl" />
+            <div>
+                <p class="text-center md:text-left font-semibold text-xl">Rabbi Hasan</p>
+                <p class="text-center md:text-left text-sm opacity-50">Problem Solver | Developer </p>
+            </div>
         </div>
-        <div class="mt-4 text-gray-400 space-y-2 text-center md:text-left">
+        <div class="md:mt-4 text-gray-400 space-y-1 md:space-y-2 text-right md:text-left">
             <div>
                 <i class="fa-solid fa-envelope opacity-70"></i>
                 <a href="mailto:imrabbihasan@gmailcom" target="blank">imrabbihasan@gmail.com</a>
@@ -94,7 +95,7 @@
      <!-- main 70% width -->
      <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] md:h-auto md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
         <nav>
-            <ul class="flex gap-6 list-none p-0 m-0 justify-evenly">
+            <ul class="grid grid-cols-3 md:flex gap-6 list-none p-0 m-0 justify-evenly">
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
                     <a href="index.html" class="px-2">About</a>
                 </li>
@@ -107,9 +108,7 @@
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
                     <a href="#" class="px-2">Experience</a>
                 </li>
-                <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
-                    <a href="#" class="px-2">Extra-Curriculam</a>  <!-- hover:cursor-not-allowed pointer-events-none  (click kora jabe na eta dile)-->
-                </li>
+                
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
                     <a href="Resume.html" class="px-2">Resume</a>
                 </li>
@@ -119,10 +118,97 @@
             </ul>
         </nav>
         <!-- About Page -->
-        <main class="m-8 flex place-content-center">
-            <div class="mt-8">
-            
-               
+        <main class="m-8">
+            <div class="mt-16">
+                <p class="mt-8 text-lg md:text-xl w-60 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Project on github</p>
+                <div class="grid grid-cols-1 gap-8 mt-8">
+                    <!-- Project 1 -->
+                    <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
+                        <a href="https://github.com/Rabbi-hasan0/Travel-and-Tourism-Management-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">Travel-and-Tourism-Management-System</a>
+                        <img src="img/project_1_icon.ong.png" alt="project1" class="w-12 h-8 absolute top-2 right-2"/>
+                        <div class="space-y-2 mt-12">
+                            <p class="text-semibold text-gray-200"> Descriptions:  
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    By integrating these features into a desktop application, 
+                                    travelers will have a centralized platform to plan, book, 
+                                    and enhance their travel experiences, ultimately making their 
+                                    journeys more enjoyable and organized.
+                                </span>
+                            </p>
+                            <p class="text-semibold text-gray-200"> Core Features:
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    User registration and authentication system and booking
+                                    management for travel packages and accommodations.
+                                    Customer and booking data using MySQL for database
+                                    storage.
+                                </span>
+                            </p>
+                            <p class="text-semibold text-gray-200"> Technology: 
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    Developed using Java, standard Java library packages.
+                                </span> 
+                            </p>
+                            <p class="text-semibold text-gray-200"> Tools:
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    Apache NetBeans IDE 22, MySQL Workbench 8.0.38.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
+                        <a href="https://github.com/Rabbi-hasan0/Plant-Monitoring-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">Plant-Monitoring-System</a>
+                        <img src="img/plant_icon.png" alt="project2" class="w-12 h-8 absolute top-2 right-2"/>
+                        <div class="space-y-2 mt-12">
+                            <p class="text-semibold text-gray-200"> Descriptions:  
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    By integrating these features for smart plant monitoring system, 
+                                </span>
+                            </p>
+                            <p class="text-semibold text-gray-200"> Core Features:
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    Users can digitally monitor soil moisture, temperature, and humidity in real-time.
+
+                                </span>
+                            </p>
+                            <p class="text-semibold text-gray-200"> Technology: 
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    ESP8266 NodeMCU, Soil Moisture Sensor, DHT11, Relay Module, Water Pump, 16x2 LCD Display.
+                                </span> 
+                            </p>
+                            <p class="text-semibold text-gray-200"> Tools:
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    Arduino IDE, C/C++, Blynk IoT Platform, Wi-Fi.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-16 text-lg md:text-xl w-36 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Project on live</p>
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <!-- Portfolio -->
+                    <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
+                        <a href="https://github.com/Rabbi-hasan0/Travel-and-Tourism-Management-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">My portfolio</a>
+                        <img src="img/port_icon.png" alt="portfolio" class="w-8 h-8 absolute top-2 right-2"/>
+                        <div class="space-y-2 mt-12">
+                            <p class="text-semibold text-gray-200"> Descriptions:  
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    By integrating this portfolio is responsive and viewed on any device. 
+                                    For this project I'm not proud but I'm excited.
+                                </span>
+                            </p>
+                            <p class="text-semibold text-gray-200"> Technology: 
+                                <span class="text-gray-400 text-sm p-2 pt-0">
+                                    I'm using here HTML5, CSS3, Tailwind CSS and JavaScript 2%.
+                                </span> 
+                            </p>
+                
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </main>
     </div>
