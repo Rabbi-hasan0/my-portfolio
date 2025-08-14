@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -27,48 +27,48 @@
 
     <style>
         .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;       /* chikon scrollbar */
+            width: 6px;
         }
-
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: black; /* track color */
+            background: black;
         }
-
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: rgb(135, 135, 135); /* thumb color */
+            background-color: rgb(135, 135, 135);
             border-radius: 30px;
-            border: 1px solid rgb(52, 25, 52); /* optional */
+            border: 1px solid rgb(52, 25, 52);
         }
         @keyframes marquee {
             0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Move half width because we duplicated items */
+            100% { transform: translateX(-50%); }
         }
-
         .animate-marquee {
             display: flex;
             animation: marquee 15s linear infinite;
         }
-
         .animate-marquee:hover {
-            animation-play-state: paused; /* pause on hover */
+            animation-play-state: paused;
         }
     </style>
 </head>
 
 <body class="h-screen bg-gradient-to-br from-black to-purple-900 font-poppins">
 
-    <div class="w-full h-screen flex flex-col md:flex-row justify-center gap-2 bg-black px-[1%] md:p-[5%] overflow-y-scroll">
+    <div class="w-full h-screen flex flex-col lg:flex-row justify-center gap-2 bg-black px-[1%] lg:p-[5%] overflow-y-scroll">
+    
     <!-- aside 20% width -->
-    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-b-0 md:border-b border-purple-500 md:border-r-0 w-full h-[30%] md:h-auto md:w-[20%] p-6 flex flex-row md:flex-col md:items-start overflow-y-hidden custom-scrollbar">
-    <div class="md:block md:items-start md:mb-6 md:border-b-2 border-purple-500 md:pb-4">
+    <aside class="text-white rounded-xl shadow-2xl shadow-black border border-b-0 lg:border-b border-purple-500 lg:border-r-0 w-full h-[30%] lg:h-auto lg:w-[20%] p-6 flex flex-row justify-between lg:flex-col lg:items-start overflow-y-hidden custom-scrollbar">
+        <!-- Profile div -->
+        <div class="flex-1 lg:block lg:items-start lg:mb-6 lg:border-b-2 border-purple-500 lg:pb-4">
             <img src="img/prof.JPG" alt="Profile Picture" 
-                class="mx-auto mb-4 w-24 h-24 rounded-xl md:w-full md:h-auto md:rounded-xl" />
+                class="mx-auto mb-4 w-24 h-24 rounded-xl lg:w-full lg:h-auto lg:rounded-xl" />
             <div>
-                <p class="text-center md:text-left font-semibold text-xl">Rabbi Hasan</p>
-                <p class="text-center md:text-left text-sm opacity-50">Problem Solver | Developer </p>
+                <p class="text-center lg:text-left font-semibold text-xl">Rabbi Hasan</p>
+                <p class="text-center lg:text-left text-sm opacity-50">Problem Solver | Developer </p>
             </div>
         </div>
-        <div class="md:mt-4 text-gray-400 space-y-1 md:space-y-2 text-right md:text-left">
+
+        <!-- Contact div -->
+        <div class="flex-1 lg:mt-4 text-gray-400 space-y-1 lg:space-y-2 lg:text-left">
             <div>
                 <i class="fa-solid fa-envelope opacity-70"></i>
                 <a href="mailto:imrabbihasan@gmailcom" target="blank">imrabbihasan@gmail.com</a>
@@ -92,10 +92,10 @@
         </div>
     </aside>
 
-     <!-- main 70% width -->
-     <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] md:h-auto md:w-[70%] md:h- overflow-y-auto custom-scrollbar">
+    <!-- main 70% width -->
+    <div class="bg-black text-white rounded-xl shadow-2xl shadow-black p-8 border border-purple-500 w-full h-[80%] lg:h-auto lg:w-[70%] overflow-y-auto custom-scrollbar">
         <nav>
-            <ul class="grid grid-cols-3 md:flex gap-6 list-none p-0 m-0 justify-evenly">
+            <ul class="grid grid-cols-3 lg:flex gap-6 list-none p-0 m-0 justify-evenly">
                 <li class="relative transition-all duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:h-[2px] before:w-0 before:bg-current before:transition-all before:duration-300 before:ease-in-out hover:before:w-full hover:text-purple-600 hover:-translate-y-1 hover:scale-110 current:before:w-full current:text-purple-600 current:-translate-y-1 current:scale-110">
                     <a href="index.html" class="px-2">About</a>
                 </li>
@@ -117,35 +117,30 @@
                 </li>
             </ul>
         </nav>
+
         <!-- About Page -->
         <main class="m-8">
             <div class="mt-16">
-                <p class="mt-8 text-lg md:text-xl w-60 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Project on github</p>
+                <p class="mt-8 text-lg lg:text-xl w-60 rounded-e-xl underline underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300">Project on github</p>
                 <div class="grid grid-cols-1 gap-8 mt-8">
                     <!-- Project 1 -->
                     <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
-                        <a href="https://github.com/Rabbi-hasan0/Travel-and-Tourism-Management-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">Travel-and-Tourism-Management-System</a>
+                        <a href="https://github.com/Rabbi-hasan0/Travel-and-Tourism-Management-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md lg:text-lg">Travel-and-Tourism-Management-System</a>
                         <img src="img/project_1_icon.ong.png" alt="project1" class="w-12 h-8 absolute top-2 right-2"/>
                         <div class="space-y-2 mt-12">
                             <p class="text-semibold text-gray-200"> Descriptions:  
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    By integrating these features into a desktop application, 
-                                    travelers will have a centralized platform to plan, book, 
-                                    and enhance their travel experiences, ultimately making their 
-                                    journeys more enjoyable and organized.
+                                    By integrating these features into a desktop application, travelers will have a centralized platform to plan, book, and enhance their travel experiences.
                                 </span>
                             </p>
                             <p class="text-semibold text-gray-200"> Core Features:
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    User registration and authentication system and booking
-                                    management for travel packages and accommodations.
-                                    Customer and booking data using MySQL for database
-                                    storage.
+                                    User registration, booking management, and MySQL database integration.
                                 </span>
                             </p>
                             <p class="text-semibold text-gray-200"> Technology: 
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    Developed using Java, standard Java library packages.
+                                    Java, Java standard library packages.
                                 </span> 
                             </p>
                             <p class="text-semibold text-gray-200"> Tools:
@@ -157,57 +152,52 @@
                     </div>
                     <!-- Project 2 -->
                     <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
-                        <a href="https://github.com/Rabbi-hasan0/Plant-Monitoring-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">Plant-Monitoring-System</a>
+                        <a href="https://github.com/Rabbi-hasan0/Plant-Monitoring-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md lg:text-lg">Plant-Monitoring-System</a>
                         <img src="img/plant_icon.png" alt="project2" class="w-12 h-8 absolute top-2 right-2"/>
                         <div class="space-y-2 mt-12">
                             <p class="text-semibold text-gray-200"> Descriptions:  
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    By integrating these features for smart plant monitoring system, 
+                                    Smart system for monitoring soil moisture, temperature, and humidity in real-time.
                                 </span>
                             </p>
                             <p class="text-semibold text-gray-200"> Core Features:
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    Users can digitally monitor soil moisture, temperature, and humidity in real-time.
-
+                                    IoT-enabled monitoring with ESP8266, sensors, and water pump automation.
                                 </span>
                             </p>
                             <p class="text-semibold text-gray-200"> Technology: 
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    ESP8266 NodeMCU, Soil Moisture Sensor, DHT11, Relay Module, Water Pump, 16x2 LCD Display.
+                                    ESP8266 NodeMCU, DHT11, Relay Module, 16x2 LCD.
                                 </span> 
                             </p>
                             <p class="text-semibold text-gray-200"> Tools:
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    Arduino IDE, C/C++, Blynk IoT Platform, Wi-Fi.
+                                    Arduino IDE, C/C++, Blynk IoT Platform.
                                 </span>
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <p class="mt-16 text-lg md:text-xl w-36 rounded-e-xl underline text-warp underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300 delay-50">Project on live</p>
+                <p class="mt-16 text-lg lg:text-xl w-36 rounded-e-xl underline underline-offset-8 decoration-2 decoration-indigo-500 hover:cursor-pointer hover:-translate-x-1 hover:scale-110 hover:text-purple-600 transition duration-300">Project on live</p>
                 <div class="grid grid-cols-1 gap-4 mt-8">
                     <!-- Portfolio -->
                     <div class="relative h-auto rounded-md bg-gray-900 shadow-xl flex flex-col p-4">
-                        <a href="https://github.com/Rabbi-hasan0/Travel-and-Tourism-Management-System" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md md:text-lg">My portfolio</a>
+                        <a href="https://github.com/Rabbi-hasan0" target="_blank" class="absolute top-2 left-2 text-cyan-400 font-semibold text-md lg:text-lg">My portfolio</a>
                         <img src="img/port_icon.png" alt="portfolio" class="w-8 h-8 absolute top-2 right-2"/>
                         <div class="space-y-2 mt-12">
                             <p class="text-semibold text-gray-200"> Descriptions:  
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    By integrating this portfolio is responsive and viewed on any device. 
-                                    For this project I'm not proud but I'm excited.
+                                    Responsive portfolio website built with TailwindCSS.
                                 </span>
                             </p>
                             <p class="text-semibold text-gray-200"> Technology: 
                                 <span class="text-gray-400 text-sm p-2 pt-0">
-                                    I'm using here HTML5, CSS3, Tailwind CSS and JavaScript 2%.
+                                    HTML5, CSS3, Tailwind CSS, JavaScript.
                                 </span> 
                             </p>
-                
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </main>
